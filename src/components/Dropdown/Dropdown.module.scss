@@ -1,0 +1,14 @@
+.serviceMenu{
+    border:1px solid grey;
+    padding:50px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+   ul{
+    padding-left:0px;
+    li{
+    list-style-type:none;
+    margin-bottom: 20px;
+    }
+    }
+}

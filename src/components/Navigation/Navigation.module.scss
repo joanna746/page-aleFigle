@@ -1,0 +1,27 @@
+.button{
+    width:100%;
+    border:none;
+    background-color: transparent;
+    font-family: cursive;
+    font-size: 1.5rem;
+    color: #464689;  
+}
+.listNav{
+    list-style-type: none;
+    padding-left: 0px;
+    display: grid;
+    justify-content: center;
+    position:absolute;
+    z-index:10;
+    background-color: white;
+    padding: 50px 50px 10px 10px;
+    border:1px solid grey;
+    font-family: cursive;
+    font-size: 1rem;
+    color: #464689;
+    li{
+    margin-bottom:30px;
+    
+    }
+   
+}

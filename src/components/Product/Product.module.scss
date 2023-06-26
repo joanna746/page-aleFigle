@@ -1,0 +1,137 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+section{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: $font-family;
+}
+.product {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr ;
+  margin: ($base-size * 6) ($base-size * 3);
+  background: white;
+  border-radius: $radius;
+  box-shadow: yellow;
+  padding: ($base-size * 2) $base-size;
+  position: relative;
+  border:1px solid black;
+}
+.containerProduct{
+  display: grid;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+}
+.imageContainer {
+  flex: 30% 0 40%;
+ 
+  padding: 0 ($base-size * 2);
+ 
+  margin-top: 30px;
+  min-width: 200px;
+}
+
+.image {
+  width: 100%;
+  border-radius: $radius;
+  box-shadow: yellow;
+}
+
+.name {
+  margin: $base-size 0;
+  font-size: $base-size * 3;
+}
+
+.price {
+  font-size: $base-size * 2;
+
+}
+
+.optionLabel {
+  margin: $base-size 0;
+}
+
+.choices {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  button {
+    border:1px solid grey;
+    color: inherit;
+    font: inherit;
+    white-space: nowrap;
+    background: azure;
+    background: $color-dark;
+    border-radius: math.div($radius, 2);
+    padding: $base-size;
+    margin: math.div($base-size, 2.5) $base-size;
+    background: rgba(138, 145, 160, 0.5);
+    min-width: $base-size * 3;
+    min-height: $base-size * 3;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1.2);
+      white-space: nowrap;
+      background: azure;
+    }
+
+   
+  
+    &.colorRed {
+      background: #ab224b;
+    }
+    &.colorBlue {
+      background: #b2c6e1;
+    }
+    &.colorBeige {
+      background: #c79a8b;
+    }
+  
+    &.colorWhite {
+      background: #fff;
+    }
+  
+    &.colorPink {
+      background:#c798a2;
+    }
+  
+    &.colorGreen {
+      background: #2e5d5b;
+    }
+    &.colorYellow {
+      background: #f0e816;
+    }
+    &.colorLightblue {
+      background: #c2e9e0;
+    }
+    &.colorLightbeige {
+      background: #c2c0bc;
+    }
+    &:first-child {
+      margin-left: 0;
+      
+    }
+  }
+
+}
+
+.sizes .choices button:hover{
+  background: rgb(47, 53, 66);
+}
+
+.button {
+  position: absolute;
+  top: -$base-size * 2;
+  right: -$base-size * 2;
+  font-size: $base-size * 2;
+  border-radius: 100%;
+  width: $base-size * 5;
+  height: $base-size * 5;
+}

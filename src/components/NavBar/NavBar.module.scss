@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    justify-content: space-between; 
+    margin: 50px;
+   
+    .navItems{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 50px;
+        margin-right: 50px;
+        list-style-type: none;
+        font-family: cursive;
+            font-size: 1.5rem;
+            color: #464689; 
+            text-decoration: none;
+            .navItem{
+                a{
+                    text-decoration: none;
+                }
+                a:hover{
+                    color:green;
+                }
+                .services-submenu{
+                    .submenu-item{
+                        list-style-type: none;
+                       }
+                }
+            } 
+       
+    }
+
+}
+
+.image{
+    width:100px;
+    height:100px;
+}
