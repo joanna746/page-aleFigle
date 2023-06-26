@@ -37,51 +37,53 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className={styles.navbar} ref={navRef}>
-      <Link to="/">
-        <div className={styles.image}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/logo-firmy.jpg`}
-            alt="ale figle"
-            width="100px"
-            height="100px"
-          />
-        </div>
-      </Link>
-      <ul className={styles.navItems}>
-        {navItems.map((item) => {
-          if (
-            item.title === "Niemowlak" ||
-            item.title === "Dziewczynka" ||
-            item.title === "Chłopiec"
-          ) {
+    <div className={styles.navDiv}>
+      <nav className={styles.navbar} ref={navRef}>
+        <Link to="/">
+          <div className={styles.image}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/logo-firmy.jpg`}
+              alt="ale figle"
+              width="100px"
+              height="100px"
+            />
+          </div>
+        </Link>
+        <ul className={styles.navItems}>
+          {navItems.map((item) => {
+            if (
+              item.title === "Niemowlak" ||
+              item.title === "Dziewczynka" ||
+              item.title === "Chłopiec"
+            ) {
+              return (
+                <li
+                  key={item.id}
+                  className={clsx(item.cName, styles.navItem)}
+                  onClick={() => handleClick(item.title)}
+                >
+                  <span>{item.title}</span>
+                  {dropdown && item.title === selectedCategory && (
+                    <Dropdown
+                      items={serviceDropdown.find(
+                        (dropdownItem) =>
+                          dropdownItem.title === selectedCategory
+                      ).submenu}
+                    />
+                  )}
+                </li>
+              );
+            }
             return (
-              <li
-                key={item.id}
-                className={clsx(item.cName, styles.navItem)}
-                onClick={() => handleClick(item.title)}
-              >
+              <li key={item.id} className={clsx(item.cName, styles.navItem)}>
                 <Link to={item.path}>{item.title}</Link>
-                {dropdown && item.title === selectedCategory && (
-                  <Dropdown
-                    items={serviceDropdown.find(
-                      (dropdownItem) =>
-                        dropdownItem.title === selectedCategory
-                    ).submenu}
-                  />
-                )}
               </li>
             );
-          }
-          return (
-            <li key={item.id} className={clsx(item.cName, styles.navItem)}>
-              <Link to={item.path}>{item.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      <Button />
-    </nav>
+          })}
+        </ul>
+        <Button />
+      </nav>
+    </div>
   );
 };
 

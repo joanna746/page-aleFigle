@@ -1,8 +1,10 @@
 import React from 'react';
-import Products from './components/Products/Products';
 import styles from './styles/global.scss';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import Niemowlak from './pages/Niemowlak';
+import Home from './pages/Home';
+import Products from './components/Products/Products';
 
 
 
@@ -12,9 +14,13 @@ const App = () => {
 
     <div className={styles.body}>
     <BrowserRouter>
-   
     <NavBar/>
-    <Products/>
+    <Routes>
+    <Route path="/Niemowlak-produkty" element={<Niemowlak/>}/>
+    <Route path="/" element={<Home />} />
+    </Routes>
+    
+    
     </BrowserRouter>
     </div>
   );
