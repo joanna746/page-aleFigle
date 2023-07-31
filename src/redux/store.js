@@ -1,13 +1,12 @@
 import { createStore } from "redux";
+import initialState from "./initialState";
 
 
 
 const reducer = (state, action) => {
  return state;
 };
-const initialState = {
- products: []
-};
+
 const store = createStore(
  reducer,
  initialState,

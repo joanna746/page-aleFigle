@@ -1,7 +1,7 @@
 import dropdown from '../../data/menu';
 import styles from './Navigation.module.scss';
 import React, { useState, useEffect, useRef } from "react";
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+
 import Container from '../Container/Container';
 
 const Navigation = (props) => {

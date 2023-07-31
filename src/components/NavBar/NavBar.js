@@ -6,6 +6,7 @@ import Dropdown from "../Dropdown/Dropdown";
 import Button from "../Button/Button";
 import clsx from "clsx";
 import { serviceDropdown } from "../../data/dropdown";
+import SearchForm from "../SearchForm/SearchForm";
 
 const NavBar = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -81,8 +82,13 @@ const NavBar = () => {
             );
           })}
         </ul>
+        
         <Button />
+       
       </nav>
+      <Link to="signup"   >
+       <SearchForm/>
+     </Link>
     </div>
   );
 };

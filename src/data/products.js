@@ -2,7 +2,7 @@ const productsData = [
     {
         id: 1,
         name: 'shirt',
-        title: 'Spódniczki aleFigle',
+        title: 'Spódniczki',
         basePrice: 90,
         colors: ['red', 'lightbeige', 'white','pink','green'],
         sizes: [
@@ -15,7 +15,7 @@ const productsData = [
       {
         id: 2,
         name: 'hat',
-        title: 'Czapki aleFigle',
+        title: 'Czapki',
         basePrice: 30,
         colors: ['lightblue', 'grey', 'red','beige','pink','blue'],
         sizes: [

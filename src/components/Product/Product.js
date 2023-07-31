@@ -48,9 +48,7 @@ import ImageContainer from './ImageContainer';
                 )}
             </ul>
           </div>
-          <Button className={styles.button}>
-            <span className="fa fa-shopping-cart" />
-          </Button>
+         
         </form>
       </div>
     </article>
